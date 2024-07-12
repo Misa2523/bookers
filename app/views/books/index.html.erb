@@ -1,0 +1,29 @@
+<!--一覧画面-->
+<h1>Books</h1>
+
+<!--投稿一覧-->
+<table>
+    <thead>
+        <tr>
+            <th>Title</th><th>Detail</th><th>詳細</th><th>編集</th><th>削除</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>タイトル</td><td>詳細</td><td>ボタン</td><td>ボタン</td><td>ボタン</td></tr>
+    </tbody>
+</table>
+
+
+<!--新規投稿-->
+<h1>New Post</h1>
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
+
+    <h4>Title</h4>
+    <%= f.text_field :title %>   <!--タイトル入力-->
+
+    <h4>Detail</h4>
+    <%= f.text_area :body %>     <!--詳細入力-->
+
+    <%= f.submit 'New Post' %>   <!--投稿ボタン-->
+
+<% end %>
