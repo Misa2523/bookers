@@ -1,9 +1,23 @@
 <!--詳細画面-->
-<h1>投稿詳細画面</h1>
-<p>Find me in app/views/books/show.html.erb</p>
 
-<!--タイトル-->
-<!--詳細-->
+<!--フラッシュメッセージの表示-->
+<div>
+    <%= flash[:notice] %>
+</div>
+
+<h2>【Title】</h2>
+<p><%= @book.title %></p>
+
+<h2>【Detail】</h2>
+<p><%= @book.body %></p>
 
 
-<!--編集画面にいくボタン(Edit)、一覧画面にいくボタン（Back）-->
+<!--編集画面(edit.html.erb)にいくボタン-->
+<span>
+    <%= link_to 'Edit', edit_book_path(@book.id) %>
+</span>
+
+<!--一覧画面(index.html.erb)に戻るボタン-->
+<span>
+    <%= link_to 'Back', "/books" %>
+</span>
