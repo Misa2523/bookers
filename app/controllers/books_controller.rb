@@ -15,8 +15,8 @@ class BooksController < ApplicationController
     #データをデータベースに保存するsaveメソッド実行
     book.save
     #新規登録した本の詳細画面へリダイレクト
-    #redirect_to '/'
-    redirect_to 'books/:id'
+    redirect_to '/'
+    #redirect_to 'books/:id'
 
   end
 
