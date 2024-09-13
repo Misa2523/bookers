@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #get 'books/new'
   #resourcesメソッドを使用してルーティングを記述
-  root to: 'homes#top'    #トップ画面（ルートパスで設定）
+  root to: "homes#top"    #トップ画面（ルートパスで設定）
   resources :books
   #resourcesメソッド：ルーティングを一括して自動生成する
 

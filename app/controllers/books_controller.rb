@@ -41,7 +41,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
-  #編集画面での、更新アクション
+  #編集画面での更新アクション
   def update
     book = Book.find(params[:id])
 
